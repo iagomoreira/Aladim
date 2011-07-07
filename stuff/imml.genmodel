@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/gmfTest/src"
+    modelPluginID="gmfTest" modelName="Imml" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>../../imml/model/imml.ecore</foreignModel>
+  <genPackages prefix="Imml" disposableProviderFactory="true" ecorePackage="imml.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="imml.ecore#//objectType">
+      <genEnumLiterals ecoreEnumLiteral="imml.ecore#//objectType/text"/>
+      <genEnumLiterals ecoreEnumLiteral="imml.ecore#//objectType/number"/>
+      <genEnumLiterals ecoreEnumLiteral="imml.ecore#//objectType/data"/>
+      <genEnumLiterals ecoreEnumLiteral="imml.ecore#//objectType/finiteSet"/>
+      <genEnumLiterals ecoreEnumLiteral="imml.ecore#//objectType/image"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="imml.ecore#//structureOperatorType">
+      <genEnumLiterals ecoreEnumLiteral="imml.ecore#//structureOperatorType/join"/>
+      <genEnumLiterals ecoreEnumLiteral="imml.ecore#//structureOperatorType/select"/>
+      <genEnumLiterals ecoreEnumLiteral="imml.ecore#//structureOperatorType/sequence"/>
+      <genEnumLiterals ecoreEnumLiteral="imml.ecore#//structureOperatorType/combine"/>
+      <genEnumLiterals ecoreEnumLiteral="imml.ecore#//structureOperatorType/repeat"/>
+    </genEnums>
+    <genClasses ecoreClass="imml.ecore#//interfaceModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imml.ecore#//interfaceModel/application"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference imml.ecore#//interfaceModel/domain"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference imml.ecore#//interfaceModel/interaction"/>
+    </genClasses>
+    <genClasses ecoreClass="imml.ecore#//domainFunction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imml.ecore#//domainFunction/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imml.ecore#//domainFunction/preCondition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imml.ecore#//domainFunction/postCondition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference imml.ecore#//domainFunction/states"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference imml.ecore#//domainFunction/controls"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference imml.ecore#//domainFunction/operands"/>
+    </genClasses>
+    <genClasses ecoreClass="imml.ecore#//State">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imml.ecore#//State/name"/>
+    </genClasses>
+    <genClasses ecoreClass="imml.ecore#//Control">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imml.ecore#//Control/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference imml.ecore#//Control/changeFrom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference imml.ecore#//Control/changeTo"/>
+    </genClasses>
+    <genClasses ecoreClass="imml.ecore#//domainObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imml.ecore#//domainObject/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imml.ecore#//domainObject/type"/>
+    </genClasses>
+    <genClasses ecoreClass="imml.ecore#//domainModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference imml.ecore#//domainModel/domainObjects"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference imml.ecore#//domainModel/domainFunctions"/>
+    </genClasses>
+    <genClasses ecoreClass="imml.ecore#//inputOperand"/>
+    <genClasses ecoreClass="imml.ecore#//outputOperand"/>
+    <genClasses ecoreClass="imml.ecore#//interactionModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference imml.ecore#//interactionModel/interactions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference imml.ecore#//interactionModel/tasks"/>
+    </genClasses>
+    <genClasses ecoreClass="imml.ecore#//functionInteraction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imml.ecore#//functionInteraction/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference imml.ecore#//functionInteraction/structures"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference imml.ecore#//functionInteraction/function"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="imml.ecore#//interactionStructure">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference imml.ecore#//interactionStructure/interactions"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="imml.ecore#//basicInteraction"/>
+    <genClasses ecoreClass="imml.ecore#//enterInformation"/>
+    <genClasses ecoreClass="imml.ecore#//selectInformation"/>
+    <genClasses ecoreClass="imml.ecore#//perceiveInforrmation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imml.ecore#//perceiveInforrmation/constant"/>
+    </genClasses>
+    <genClasses ecoreClass="imml.ecore#//activeControl">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference imml.ecore#//activeControl/control"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="imml.ecore#//Operand">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference imml.ecore#//Operand/object"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="imml.ecore#//structureOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference imml.ecore#//structureOperator/structures"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imml.ecore#//structureOperator/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="imml.ecore#//manipulateInformation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference imml.ecore#//manipulateInformation/object"/>
+    </genClasses>
+    <genClasses ecoreClass="imml.ecore#//Task">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute imml.ecore#//Task/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

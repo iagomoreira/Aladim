@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/aladim/src"
+    modelPluginID="aladim" modelName="Aladim" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>aladim.ecore</foreignModel>
+  <genPackages prefix="Aladim" disposableProviderFactory="true" ecorePackage="aladim.ecore#/">
+    <genClasses ecoreClass="aladim.ecore#//interfaceModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aladim.ecore#//interfaceModel/application"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aladim.ecore#//interfaceModel/interactionSpaces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aladim.ecore#//interfaceModel/domainFunctions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aladim.ecore#//interfaceModel/reactions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aladim.ecore#//interfaceModel/actions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aladim.ecore#//interfaceModel/navigations"/>
+    </genClasses>
+    <genClasses ecoreClass="aladim.ecore#//interactionSpace">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aladim.ecore#//interactionSpace/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aladim.ecore#//interactionSpace/interactions"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="aladim.ecore#//compositeInteraction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aladim.ecore#//compositeInteraction/basicInteractions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aladim.ecore#//compositeInteraction/composites"/>
+    </genClasses>
+    <genClasses ecoreClass="aladim.ecore#//enterInformation"/>
+    <genClasses ecoreClass="aladim.ecore#//selectInformation"/>
+    <genClasses ecoreClass="aladim.ecore#//perceiveInforrmation"/>
+    <genClasses image="false" ecoreClass="aladim.ecore#//basicInteraction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aladim.ecore#//basicInteraction/name"/>
+    </genClasses>
+    <genClasses ecoreClass="aladim.ecore#//activate"/>
+    <genClasses ecoreClass="aladim.ecore#//join"/>
+    <genClasses ecoreClass="aladim.ecore#//sequence"/>
+    <genClasses ecoreClass="aladim.ecore#//choose"/>
+    <genClasses ecoreClass="aladim.ecore#//repeat"/>
+    <genClasses ecoreClass="aladim.ecore#//combine"/>
+    <genClasses image="false" ecoreClass="aladim.ecore#//Interaction"/>
+    <genClasses ecoreClass="aladim.ecore#//domainFunction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aladim.ecore#//domainFunction/name"/>
+    </genClasses>
+    <genClasses ecoreClass="aladim.ecore#//transitionAction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aladim.ecore#//transitionAction/taFrom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aladim.ecore#//transitionAction/taTo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aladim.ecore#//transitionAction/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="aladim.ecore#//transitionReaction">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aladim.ecore#//transitionReaction/trFrom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aladim.ecore#//transitionReaction/trTo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aladim.ecore#//transitionReaction/name"/>
+    </genClasses>
+    <genClasses ecoreClass="aladim.ecore#//transitionReactionSuccess"/>
+    <genClasses ecoreClass="aladim.ecore#//transitionReactionFail"/>
+    <genClasses ecoreClass="aladim.ecore#//transitionNavigation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aladim.ecore#//transitionNavigation/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aladim.ecore#//transitionNavigation/tnFrom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aladim.ecore#//transitionNavigation/tnTo"/>
+    </genClasses>
+    <genClasses ecoreClass="aladim.ecore#//navigate"/>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/AspectualAcmeStudio/src"
+    modelPluginID="AspectualAcmeStudio" modelName="Aspectualacme" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>aspectualacme.ecore</foreignModel>
+  <genPackages prefix="Aspectualacme" disposableProviderFactory="true" ecorePackage="aspectualacme.ecore#/">
+    <genClasses ecoreClass="aspectualacme.ecore#//System">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aspectualacme.ecore#//System/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aspectualacme.ecore#//System/connectors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aspectualacme.ecore#//System/attachments"/>
+    </genClasses>
+    <genClasses ecoreClass="aspectualacme.ecore#//Component">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aspectualacme.ecore#//Component/port"/>
+    </genClasses>
+    <genClasses ecoreClass="aspectualacme.ecore#//Connector">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aspectualacme.ecore#//Connector/role"/>
+    </genClasses>
+    <genClasses ecoreClass="aspectualacme.ecore#//Attachment"/>
+    <genClasses ecoreClass="aspectualacme.ecore#//Role"/>
+    <genClasses ecoreClass="aspectualacme.ecore#//Port"/>
+    <genClasses ecoreClass="aspectualacme.ecore#//Element">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aspectualacme.ecore#//Element/property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aspectualacme.ecore#//Element/name"/>
+    </genClasses>
+    <genClasses ecoreClass="aspectualacme.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aspectualacme.ecore#//Property/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aspectualacme.ecore#//Property/value"/>
+    </genClasses>
+    <genClasses ecoreClass="aspectualacme.ecore#//AspectualConnector">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aspectualacme.ecore#//AspectualConnector/baseRole"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aspectualacme.ecore#//AspectualConnector/crosscuttingRole"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aspectualacme.ecore#//AspectualConnector/glues"/>
+    </genClasses>
+    <genClasses ecoreClass="aspectualacme.ecore#//CrosscuttingRole"/>
+    <genClasses ecoreClass="aspectualacme.ecore#//BaseRole"/>
+    <genClasses ecoreClass="aspectualacme.ecore#//Glue">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aspectualacme.ecore#//Glue/prefixRole"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aspectualacme.ecore#//Glue/suffixRole"/>
+      <genFeatures createChild="false" propertyDescription="Define quando será disparada a caracteristica transversal. Os valores permitidos são:&quot;before&quot;, &quot;around&quot; ou &quot;after&quot;"
+          ecoreFeature="ecore:EAttribute aspectualacme.ecore#//Glue/glueType">
+        <propertyFilterFlags>before</propertyFilterFlags>
+        <propertyFilterFlags>around</propertyFilterFlags>
+        <propertyFilterFlags>after</propertyFilterFlags>
+      </genFeatures>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference aspectualacme.ecore#//Glue/aspectualConnector"/>
+    </genClasses>
+    <genClasses ecoreClass="aspectualacme.ecore#//AttachmentDeclaration">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aspectualacme.ecore#//AttachmentDeclaration/attachedBaseElement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference aspectualacme.ecore#//AttachmentDeclaration/attachedToElement"/>
+    </genClasses>
+    <genClasses ecoreClass="aspectualacme.ecore#//Binding"/>
+    <genClasses ecoreClass="aspectualacme.ecore#//AspectualComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aspectualacme.ecore#//AspectualComponent/star"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
