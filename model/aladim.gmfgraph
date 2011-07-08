@@ -41,8 +41,7 @@
         <layout
             xsi:type="gmfgraph:FlowLayout"/>
         <backgroundColor
-            xsi:type="gmfgraph:ConstantColor"
-            value="yellow"/>
+            xsi:type="gmfgraph:ConstantColor"/>
         <children
             xsi:type="gmfgraph:Label"
             name="DomainFunctionNameFigure"
